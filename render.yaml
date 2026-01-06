@@ -2,11 +2,11 @@ services:
   - type: web
     name: cme-detection-backend
     env: docker
-    region: singapore
     plan: free
-    dockerContext: ./backend
-    dockerfilePath: ./backend/Dockerfile
+    dockerContext: backend
+    dockerfilePath: backend/Dockerfile
     healthCheckPath: /health
+    numInstances: 1
     envVars:
       - key: PORT
         value: 8000
