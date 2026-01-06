@@ -1,0 +1,32 @@
+# Core scientific computing
+numpy>=1.21.0
+pandas>=1.3.0
+scipy>=1.7.0
+
+# Machine learning
+scikit-learn>=1.0.0
+
+# Visualization
+matplotlib>=3.4.0
+seaborn>=0.11.0
+plotly>=5.0.0
+
+# Signal processing and wavelets
+PyWavelets>=1.1.0
+
+# Data handling for space physics
+spacepy>=0.2.0
+cdflib>=0.4.0
+
+# Additional utilities
+tqdm>=4.60.0
+pathlib2>=2.3.0
+
+# Optional: For enhanced space physics analysis
+# astropy>=4.3.0
+# sunpy>=3.0.0
+
+# Development and testing (optional)
+pytest>=6.0.0
+jupyter>=1.0.0
+notebook>=6.0.0

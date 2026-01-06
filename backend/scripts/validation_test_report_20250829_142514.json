@@ -1,0 +1,19 @@
+{
+  "test_timestamp": "2025-08-29T14:25:14.052494",
+  "summary": {
+    "authentic_sources": 0,
+    "total_sources": 3,
+    "overall_status": "issues"
+  },
+  "detailed_results": {
+    "issdc": {
+      "error": "strptime() argument 1 must be str, not datetime.datetime"
+    },
+    "cactus": {
+      "error": "strptime() argument 1 must be str, not datetime.datetime"
+    },
+    "nasa_spdf": {
+      "error": "strptime() argument 1 must be str, not datetime.datetime"
+    }
+  }
+}

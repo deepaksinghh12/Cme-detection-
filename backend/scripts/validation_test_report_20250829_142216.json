@@ -1,0 +1,19 @@
+{
+  "test_timestamp": "2025-08-29T14:22:16.651836",
+  "summary": {
+    "authentic_sources": 0,
+    "total_sources": 3,
+    "overall_status": "issues"
+  },
+  "detailed_results": {
+    "issdc": {
+      "error": "RealDataSynchronizer.sync_issdc_data() missing 2 required positional arguments: 'start_date' and 'end_date'"
+    },
+    "cactus": {
+      "error": "RealDataSynchronizer.sync_cactus_data() missing 2 required positional arguments: 'start_date' and 'end_date'"
+    },
+    "nasa_spdf": {
+      "error": "RealDataSynchronizer.sync_nasa_spdf_data() missing 2 required positional arguments: 'start_date' and 'end_date'"
+    }
+  }
+}
