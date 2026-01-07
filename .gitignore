@@ -10,3 +10,12 @@ frontend/.env
 backend/downloads/
 backend/data/*.cdf
 backend/output/
+
+# ML generated data
+*.npy
+*.csv
+*.h5
+*.pt
+*.pkl
+
+backend/scripts/7_days_forecast/
