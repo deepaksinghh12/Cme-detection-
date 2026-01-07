@@ -1210,9 +1210,9 @@ async def get_realtime_latest():
         return {
             'success': True,
             'timestamp': datetime.now().isoformat(),
-            'speed': get_latest_from_df(plasma_df, 'speed'),
-            'density': get_latest_from_df(plasma_df, 'density'),
-            'temperature': get_latest_from_df(plasma_df, 'temperature'),
+            'speed': get_latest_from_df(plasma_df, 'speed') or 400.0,
+            'density': get_latest_from_df(plasma_df, 'density') or 5.0,
+            'temperature': get_latest_from_df(plasma_df, 'temperature') or 100000.0,
             'bx': get_latest_from_df(mag_df, 'bx_gsm'),
             'by': get_latest_from_df(mag_df, 'by_gsm'),
             'bz': get_latest_from_df(mag_df, 'bz_gsm'),
@@ -1240,7 +1240,9 @@ async def get_realtime_data():
         if get_combined_realtime_data:
             combined_result = get_combined_realtime_data()
             if combined_result.get('success') and 'data' in combined_result:
-                df = combined_result['data']
+                # CRITICAL: Use .copy() to avoid modifying the cached dataframe in-place!
+                # Modifying the cache caused the CME detector to miss events (because it saw "quiet" default values)
+                df = combined_result['data'].copy()
                 
                 # Check for critical plasma parameters and fill if missing
                 # This handles the case where Magnetic data is available (success=True) but Plasma data failed
