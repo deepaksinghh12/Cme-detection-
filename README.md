@@ -290,14 +290,15 @@ This project is developed for **Smart India Hackathon (SIH)** presentation.
 ## 👥 Development Team
 **Made for Team Digi Shakti - Smart India Hackathon (SIH)**
 
-End to end developed and produced by me as **Tech System Lead & Full Stack Architect**
+End to end developed and produced by **Deepak Singh** as **Tech System Lead & Full Stack Architect**
 
 ### 🙏 Special Thanks to Team Members:
 *   Akshat Sharma
 *   Mayank Saini
-*   Deepak Singh
+*   Lakshay
 *   Garima
 *   Lily
+*   Dhruv Saini
 
 *This project represents a complete full-stack solution for space weather monitoring and CME detection, developed from concept to deployment for the Smart India Hackathon 2024.*
 
