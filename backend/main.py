@@ -632,6 +632,13 @@ def fill_noaa_missing_parameters(noaa_data: pd.DataFrame) -> pd.DataFrame:
         'alpha_proton_ratio': 0.04,  # Typical He++/H+ ratio
         'imf_latitude': 0.0,
         'imf_longitude': 0.0,
+        # Plasma parameters (critical for dashboard)
+        'speed': 400.0,
+        'density': 5.0,
+        'temperature': 100000.0,
+        'proton_velocity': 400.0,
+        'proton_density': 5.0,
+        'proton_temperature': 100000.0
     }
     
     for param, default_val in stable_values.items():
@@ -1234,6 +1241,14 @@ async def get_realtime_data():
             combined_result = get_combined_realtime_data()
             if combined_result.get('success') and 'data' in combined_result:
                 df = combined_result['data']
+                
+                # Check for critical plasma parameters and fill if missing
+                # This handles the case where Magnetic data is available (success=True) but Plasma data failed
+                critical_params = ['speed', 'density', 'temperature']
+                if any(param not in df.columns for param in critical_params) or \
+                   any(df[param].isna().all() for param in critical_params if param in df.columns):
+                    logger.warning("Missing plasma parameters in real-time data, using fallback values")
+                    df = fill_noaa_missing_parameters(df)
                 # Ensure timestamps are present
                 if 'timestamp' in df.columns:
                     ts = df['timestamp'].astype(str).tolist()
