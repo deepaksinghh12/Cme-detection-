@@ -290,16 +290,17 @@ This project is developed for **Smart India Hackathon (SIH)** presentation.
 ## 👥 Development Team
 **Made for Team Digi Shakti - Smart India Hackathon (SIH)**
 
-End to end developed and produced by me as **Tech System Lead & Full Stack Architect**
+### Team Members
+* Akshat Sharma  
+* Lakshya Sharma  
+* Dhruv Saini  
+* Garima Avasthi  
+* Lily Singhal  
+* Mayank Saini  
 
-### 🙏 Special Thanks to Team Members:
-*   Akshat Sharma
-*   Mayank Saini
-*   Deepak Singh
-*   Garima
-*   Lily
 
-*This project represents a complete full-stack solution for space weather monitoring and CME detection, developed from concept to deployment for the Smart India Hackathon 2024.*
+
+*This project represents a complete full-stack solution for space weather monitoring and CME detection, developed from concept to deployment for the Smart India Hackathon 2025.*
 
 ## 🙏 Acknowledgments
 *   NOAA Space Weather Prediction Center for real-time data
@@ -307,3 +308,4 @@ End to end developed and produced by me as **Tech System Lead & Full Stack Archi
 *   Aditya L1 mission for solar observation data
 
 > **Note**: This system is designed for educational and research purposes. For operational space weather forecasting, please refer to official space weather agencies.
+
